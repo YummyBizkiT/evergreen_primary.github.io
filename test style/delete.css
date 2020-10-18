@@ -1,0 +1,305 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #3d3d3f;
+}
+
+
+body
+{
+  background-color: #f6f5f3;  
+}
+
+.container 
+{
+  display: flex;
+  max-width: 1170px;
+  margin: auto auto;
+}
+
+header 
+{
+  width: 100%;
+  margin: auto;
+  height: 10vh;
+  background-color: #7dce94;  
+}
+
+.logo
+{
+  display: flex;
+  flex: 1;
+  justify-content: left;
+  align-items: center;
+  height: 10vh;
+
+}
+
+.nav-links 
+{
+  flex: 3;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+
+
+}
+
+.nav-links li
+{
+  list-style: none;
+  display: inline;
+  
+}
+
+.nav-links a
+{
+  
+  text-decoration: none;
+}
+
+main
+{
+  flex-direction: column;
+}
+
+.intro
+{
+  flex-direction: column;
+  padding-top: 2vh;
+  
+
+}
+.banner {
+  max-height: 50vh;
+  height: 50vh;
+  width: 100%;
+  background-color: #111111;
+  overflow: hidden;
+}
+
+.banner img 
+{
+  height: 150%;
+  width: 100%;
+  opacity: 0.4; 
+}
+
+.banner span
+{
+  font-family: 'Indie Flower', cursive;
+  font-size: 48px;
+  color: #f6f5f3;
+  position: absolute;
+  top: 30%;
+  right: 32%;
+  left: 32%;
+  
+}
+
+footer 
+{
+  width: 100%;
+  margin: auto;
+  height: auto;
+  background-color: #7dce94;  
+}
+
+footer section
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*
+.mapouter
+{
+  position: relative;
+  text-align: left;
+  height: 220px;
+  width: 300px;
+}
+
+.gmap_canvas 
+{
+  overflow: hidden;
+  background: none!important;
+  height: 220px;
+  width: 300px;
+}
+*/
+.contact
+{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+.details
+{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5em;
+}
+
+.disclaimer
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  line-height: 1.5em;
+  font-size: 0.7em;
+  font-weight: 700;
+}
+
+.gmap
+{
+  display: flex;  
+  flex-direction: column;
+  line-height: 1.5em;
+}
+
+.sitemap
+{
+  display: flex;  
+  flex-direction: column;
+  line-height: 1.5em;
+}
+
+.sitemap ul
+{
+  list-style: none;
+}
+
+.sitemap ul li a
+{
+  list-style: none;
+  text-decoration: none;
+}
+
+/*
+.logo {
+  align-items: center;
+  justify-content: space-around;
+  color: #3d3d3f;  
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-bar {    
+  justify-content: center;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-bar li {
+  list-style: none;
+}
+
+.nav-bar a {
+  color: #3d3d3f;  
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  background-color: #3d3d3f;  
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1024px){
+    
+  .logo {
+    letter-spacing: 5px;
+    font-size: 20px;    
+  }
+  
+  .nav-bar {  
+    width: 65%;
+  }
+
+}
+
+
+@media screen and (max-width: 760px){
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    padding: 0 0;
+  }
+
+  .nav-bar {   
+    position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background-color: #7dce94;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  }
+
+  .nav-bar a {
+    color: #3d3d3f;  
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .nav-bar li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+  }
+
+  .toggle .line2{
+    opacity: 0;
+  }
+
+  .toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+  }
+}
+*/

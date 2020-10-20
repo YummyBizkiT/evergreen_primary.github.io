@@ -7,65 +7,111 @@
   color: #3d3d3f;
 }
 
-.container, main .banner, main .main-info, footer .navigate, footer .contact, footer .location, footer .disclaimer {
-  max-width: 360px;
-  margin: auto auto;
+body {
+  /*
+  display: flex;
+  flex-direction: column;
+  */
+  background-color: #f6f5f3;
+}
+
+.container, header .navbar, main .banner, main .main-info, footer .navigate, footer .contact, footer .location, footer .disclaimer {
+  width: 100vw;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 header {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  background-color: #7dce94;
+  z-index: 999;
+}
+
+header .navbar {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100vw;
-  height: 10vh;
-  background-color: #7dce94;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*  .nav-links:active {
+      display: flex;          
+  }*/
 }
 
-header nav .logo {
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+header .navbar .logo {
+  font-size: 1em;
+  margin: 1.3em;
+  font-weight: bolder;
 }
 
-header nav .nav-links {
+header .navbar .nav-links {
   display: none;
+  /*flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      //height: 100%;
+      width: 100%;
+      background: color(secondary);*/
+  /*li:hover {
+         background-color: color(hover_color);
+      }*/
 }
 
-header nav .burger {
-  display: inline-block;
-  cursor: pointer;
+header .navbar .nav-links ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-header nav .burger .line1, header nav .burger .line2, header nav .burger .line3 {
-  width: 35px;
-  height: 5px;
-  margin: 6px 0;
+header .navbar .nav-links ul li {
+  list-style: none;
+}
+
+header .navbar .nav-links ul li a {
+  text-decoration: none;
+  padding: .5em 1em;
+  display: block;
+}
+
+header .navbar .toggle-button {
+  position: absolute;
+  right: 1.5em;
+  top: 1.3em;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+header .navbar .toggle-button .bar {
+  height: 3px;
+  width: 100%;
   background-color: #3d3d3f;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-header nav .burger .change .line1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-header nav .burger .change .line2 {
-  opacity: 0;
-}
-
-header nav .burger .change .line3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+  border-radius: 10px;
 }
 
 main {
   position: relative;
+  top: 10vh;
   width: 100vw;
   background-color: orange;
 }
@@ -125,30 +171,6 @@ footer {
   position: relative;
   width: 100vw;
   background-color: red;
-  /* section {
-    @extend .container;
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    .gmap_canvas {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: auto;
-
-      .gmap {
-        padding: none;
-        margin: none;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-  }*/
 }
 
 footer .navigate {
@@ -205,11 +227,46 @@ footer .contact, footer .location, footer .disclaimer {
   line-height: 1em;
 }
 
-body {
-  /*
-  display: flex;
-  flex-direction: column;
-  */
-  background-color: #f6f5f3;
+@media (hover: hover) and (pointer: fine) {
+  .nav-links li:hover {
+    background-color: white;
+  }
 }
+
+@media (min-width: 600px) {
+  .bar {
+    display: none;
+  }
+  .nav-links {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+/* section {
+    @extend .container;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .gmap_canvas {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+
+      .gmap {
+        padding: none;
+        margin: none;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+  }
+}*/
 /*# sourceMappingURL=style.css.map */
